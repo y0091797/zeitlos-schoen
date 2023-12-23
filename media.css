@@ -4,8 +4,6 @@
 @media screen and (max-width: 1680px){
 
 
-
-
 }
 
 /*--------- TABELT DEVICES -------*/
@@ -13,7 +11,7 @@
 @media screen and (max-width: 1280px){
 
     body {
-        padding: 50px 10%;
+        padding: 75px 10%;
     } 
 
     .navigation {
@@ -38,14 +36,7 @@
         padding: 0;
     }
 
-    .image-container img{
-        max-height: 500px;
-    }
-    
-    /* Stil für das farbige Rechteck hinter dem Bild */
-    .image-container::before {
-        max-height: 500px;
-    }
+
 }
 
 /*--------- MOBILE DEVICES -------*/
@@ -53,7 +44,7 @@
 @media screen and (max-width: 850px){
 
     body {
-        padding: 50px 5%;
+        padding: 125px 10%;
     } 
 
     .navigation {
@@ -61,19 +52,36 @@
     }
 
     h1{
-        font-size: 26px;
+        font-size: 22px;
     }
     
     h2{
-        font-size: 22px;
+        font-size: 18px;
+    }
+
+    .navigation a {
+        font-size: 14px;
     }
 
     .home {
         padding: 25% 0;
     }
 
+    .behandlungen {
+        padding: 25% 0;
+    }
+
+    .company-name h1 {
+        font-size: 40px; /* Größe des Firmennamens anpassen */
+    }
+
+    .company-name h1 {
+        font-size: 40px; /* Größe des Firmennamens anpassen */
+    }
+
+
     .nav-links {
-        display: flex;
+
         flex-direction: column;
         align-items: center;
         background-color: #f9f9f9;
@@ -89,10 +97,6 @@
         text-decoration: none;
         color: #333;
         margin: 10px 0;
-    }
-
-    .bar {
-        display: flex;
     }
 
     .nav-links.active {
