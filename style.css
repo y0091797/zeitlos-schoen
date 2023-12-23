@@ -2,10 +2,17 @@
 :root{
     --black: #000;
     --creme: #FFF5E1;
-    --peach: #f7aa65;
+    --peach: #fba153;
     --lightrose: #fbcbd0;
     --white: #f3f3f3;
     --lightgrey: #dcdcdc;
+}
+
+@font-face {
+    font-family: 'Monotype Corsiva';
+    src: url('monotypecorsiva.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -15,8 +22,8 @@ html {
 }
 
 body {
-    /* Cinzel Decorative, Monte Carlo, Great Vibes*/
-    font-family: "Playball";
+    /* Cinzel Decorative, Monte Carlo, Great Vibes, pacifico, charm*/
+    font-family: "Charm";
     padding: 50px 20%;
     background-color: var(--lightgrey);
     color: black;
@@ -26,7 +33,7 @@ h1{
     color: var(--peach);
     font-size: 32px;
     font-variant: small-caps;
-    font-family: "Playball";
+    font-family: "Monotype Corsiva";
 }
 
 h2{
@@ -34,10 +41,19 @@ h2{
     font-size: 26px;
 }
 
+h3 {
+    color: var(--black);
+    font-size: 22px;
+}
+
 a {
     text-decoration: none;
     font-size: 22px;
     color: black;
+}
+
+p {
+    font-size: 20px;
 }
 
 span {
@@ -129,9 +145,6 @@ header {
     padding: 20% 0;
 }
 
-.home .top {
-    padding: 30px;
-}
 .space {
     padding: 50px;
 }
@@ -149,6 +162,7 @@ header {
     display: flex;
     flex: 1;
     flex-direction: column;
+    padding: 50px 0;
 }
 
 .containercenter h1 {
@@ -193,6 +207,7 @@ header {
 
 .top {
     text-align: center;
+    padding-bottom: 25px;
 }
 
 .dot {
@@ -214,8 +229,8 @@ header {
     padding: 20% 0;
 }
 
-.contact span{
-    text-transform: uppercase;
+span{
+    font-weight: bold;
 }
 
 .contact h2 {
@@ -236,6 +251,46 @@ header {
 
 .behandlungen .containercenter {
     padding: 20px 0;
+}
+
+.behandlungen .container {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.behandlungen .top {
+    height: 30%; /* Setze hier die Höhe der oberen Fläche in Prozent oder Pixeln */
+    padding: 0;
+}
+
+.behandlungen .bottom {
+    display: flex;
+    flex-direction: row;
+    height: 70%; /* Setze hier die Höhe der unteren Fläche in Prozent oder Pixeln */
+}
+
+.behandlungen .left, .right {
+    flex: 1;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0 35%;
+}
+
+.product-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Abstand zwischen den Produkten */
+}
+
+.description {
+    flex: 1; /* Beschreibungen nehmen den verfügbaren Platz ein */
+}
+
+.price {
+    margin-left: 20px; /* Abstand zwischen Beschreibung und Preis */
 }
 
 .prices {
@@ -316,7 +371,6 @@ footer h2{
 
 .foot div{
     flex: 1;
-
 }
 
 .foot div img {
