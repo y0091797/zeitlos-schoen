@@ -37,6 +37,15 @@
         transform: rotate(25deg);
         padding: 0;
     }
+
+    .image-container img{
+        max-height: 500px;
+    }
+    
+    /* Stil für das farbige Rechteck hinter dem Bild */
+    .image-container::before {
+        max-height: 500px;
+    }
 }
 
 /*--------- MOBILE DEVICES -------*/
