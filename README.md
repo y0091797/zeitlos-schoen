@@ -2,7 +2,7 @@
 
 ## Domain Setup:
 - Provider: GoDaddy.com
-- Domain: www.komsetikinstitut-zeitlos-schoen.de
+- Domain: www.kosmetikinstitut-zeitlos-schoen.de
 
 ## Hosting:
 - Platform: GitHub Pages
