@@ -2,6 +2,9 @@
 
 ## Domain Setup:
 - Provider: GoDaddy.com
+- Nameserver (by Cloudflare):
+  - elmo.ns.cloudflare.com
+  - jade.ns.cloudflare.com
 - Domain: www.kosmetikinstitut-zeitlos-schoen.de
 
 ## Hosting:
@@ -22,16 +25,16 @@
 - DomainConnect:
   - _domainconnect -> _domainconnect.gd.domaincontrol.com
 
-## SSL/TLS - Konfiguration
+## SSL/TLS - Configuration
 - Cloudflare
-- Einstellungen [ Full / Full strict ]
+- Settings [ Full / Full strict ]
 - Zertifikatsausteller: Google Trust Services
 
 ## Cloudflare Einstellungen
-- Always Use HTTPS: Aktiviert
-- Cache leeren -> Bei Problemen
+- Always Use HTTPS: activated
+- Cache leeren -> for Troubleshooting
 
 ## Häufige Probleme
-- Zertifikats-Fehler 526
-- SSL Zertifkat nicht verfügbar
+- certificate-error 526
+- SSL-certificate not accessible
 
