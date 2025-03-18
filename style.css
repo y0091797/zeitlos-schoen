@@ -1,11 +1,11 @@
 /*-------------- ROOT ------------------*/
 :root{
     --black: #000;
-    --creme: #FFF5E1;
-    --peach: #fba153;
+    --creme: #e4d6c6;
+    --peach: #c19569;
     --lightrose: #fbcbd0;
     --white: #f3f3f3;
-    --lightgrey: #dcdcdc;
+    --lightgrey: #FAF3E0;
 }
 
 @font-face {
@@ -23,40 +23,47 @@ html {
 
 body {
     /* Cinzel Decorative, Monte Carlo, Great Vibes, pacifico, charm*/
-    font-family: "Charm";
+    font-family: "Monotype Corsiva";
     padding: 50px 20%;
-    background-color: var(--lightgrey);
+    background: linear-gradient(to bottom, #FAF3E0, #F5E8D9);
     color: black;
+    font-size: 24px;
 } 
 
 h1{
     color: var(--peach);
-    font-size: 32px;
-    font-variant: small-caps;
-    font-family: "Monotype Corsiva";
+    font-size: 36px;
+    /*font-variant: small-caps;
+    font-variant-caps: small-caps;*/
+    font-feature-settings: "smcp";
+    /*font-family: "Monotype Corsiva";*/
 }
 
 h2{
     color: var(--black);
-    font-size: 26px;
+    font-size: 35px;
 }
 
 h3 {
     color: var(--black);
-    font-size: 22px;
+    font-size: 24px;
 }
 
 a {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 24px;
     color: black;
 }
 
 p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 span {
+    margin-bottom: 10px;
+}
+
+br {
     margin-bottom: 10px;
 }
 
@@ -67,7 +74,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--white);
+    background-color: var(--creme);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Schatten unter dem Header */
 }
 
@@ -83,7 +90,7 @@ header {
 }
 .company-name h2 {
     margin: 0;
-    font-size: 24px; /* Größe des Firmennamens anpassen */
+    font-size: 40px; /* Größe des Firmennamens anpassen */
     color: var(--black);
 }
 
@@ -92,16 +99,18 @@ header {
     justify-content: space-between;
     align-items: center; /* Zentriert die Elemente vertikal */
     list-style: none;
-    padding: 5px 35%;
+    padding: 5px 30%;
+    
 }
 
 .navigation ul li {
     margin: 0 5px; /* Fügt Abstand zwischen den Elementen hinzu */
+
 }
 
 .navigation a {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 26px;
     color: black;
 }
 
@@ -111,8 +120,15 @@ header {
     display: block;
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #8B5E3C;
     transition: width 0.3s;
+}
+
+.navigation a.active,
+.navigation a:hover {
+    /*font-size: 28px; /* Vergrößert den Text */
+    font-weight: bold; /* Optional: Macht ihn fett */
+    color: #8B5E3C; /* Optional: Ein schöner Gold-Braun-Ton */
 }
 
 /* Stärkerer Unterstrich für die aktive Seite */
@@ -131,7 +147,7 @@ header {
     
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #8B5E3C;
     margin: 4px 0;
     display: none;
 }
@@ -149,9 +165,17 @@ header {
     padding: 50px;
 }
 
+.bulletpoints {
+    list-style-type: disc;
+}
+
+.bulletpoints li::marker {
+    color: var(--peach);
+}
+
 .containerlr {
     display: flex;
-    padding: 50px 0;
+    padding: 75px 0;
 }
 
 .containerlr p {
@@ -162,7 +186,7 @@ header {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 75px 0;
 }
 
 .containercenter h1 {
@@ -190,9 +214,16 @@ header {
     width: 100%;
     height: 100%;
     background-color: var(--white);
+    /*background: linear-gradient(to bottom, #FAF3E0, #F5E8D9);*/
     border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     transform: rotate(-7deg); /* Negative Gradzahl für eine leichte Drehung nach links */
     z-index: -1;
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
 
 .left {
@@ -208,6 +239,11 @@ header {
 .top {
     text-align: center;
     padding-bottom: 25px;
+}
+
+.dots {
+    text-align:center;
+    padding: 10px
 }
 
 .dot {
@@ -233,8 +269,36 @@ span{
     font-weight: bold;
 }
 
+.contact p {
+    white-space: pre-line;
+    margin: 15px 0 25px 0;
+    padding: 0;
+}
+
+.contact h1 {
+    margin: 30px 0 20px 0;
+}
+
 .contact h2 {
-    margin-bottom: 5px;
+    margin: 10px 0 5px 0;
+    font-size: 30px;
+}
+
+.contact h3 {
+    margin: 5px 0 0 0;
+    font-size: 38px;
+    color: var(--peach);
+}
+
+.contact div .absatz img{
+    margin-top: -25px;
+    max-width: 300px;
+}
+
+.contact .klein {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 0px;
 }
 
 .contact iframe {
@@ -242,21 +306,35 @@ span{
     width: 100%;
 }
 
+.contact .containercenter {
+    text-align: center;
+}
+
 
 /*--------- BEHANDLUNGEN -----------*/
 
 .behandlungen {
-    padding: 20% 0;
+    padding: 30% 0 0 0;
 }
 
 .behandlungen .containercenter {
-    padding: 20px 0;
+    padding: 25px 0;
+}
+
+.behandlungen .containercenter img{
+    max-height: 500px;
+    width: 100%;
+    filter: saturate(100%) brightness(100%);
 }
 
 .behandlungen .container {
-    padding: 25px 0;
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
+}
+
+.behandlungen h1 {
+    text-align: center;
 }
 
 .behandlungen .top {
@@ -290,43 +368,50 @@ span{
 }
 
 .price {
-    margin-left: 20px; /* Abstand zwischen Beschreibung und Preis */
+    font-weight: bolder;
 }
 
 .prices {
+    /*padding-right: 20px;*/
     display: flex;
-    width: 100%;
+    max-width: 90%;
     justify-content: flex-end;
     align-items: right;
     text-align: right;
     position: relative; /* Position des übergeordneten Elements festlegen */
+
 }
 
-.prices::before {
+/*Horizontale Linie*/
+/*.prices::before {
     content: '';
     position: absolute;
-    bottom: -5px; /* Negative Position nach unten */
+    bottom: -5px; 
     left: 0;
     width: 100%;
     height: 1px;
     background: rgba(0, 0, 0, 0.75);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.25); /* Hier wird der Schatten erzeugt */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}*/
+
+.behandlungen img {
+    max-height: 100px;
+    width: 100%;
+    filter: saturate(75%) brightness(110%);
 }
 
-/*--------- KONTAKT -----------*/
-
-.contact .containercenter {
-    text-align: center;
-}
-
-.contact .containercenter .image-container::before{
+.behandlungen .center {
     text-align: center;
 }
 
 /*--------- IMPRESSUM -----------*/
 
 .impressum {
-    padding: 20% 0;
+    padding: 25% 0;
+}
+
+.impressum p {
+    white-space: pre-line;
 }
 
 /*--------- FOOTER -----------*/
@@ -339,7 +424,7 @@ footer{
     padding: 0;
     font-weight: 300;
     text-align: center;
-    background: var(--white);
+    background: var(--creme);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); /* Schatten unter dem Header */
     
 }
@@ -354,19 +439,19 @@ footer p{
 }
 
 footer span{
-    font-size: 20px;
-    line-height: 3;
+    font-size: 25px;
+    line-height: 2;
 }
 
 footer h2{
-    margin-bottom: 15px;
+    margin: 5px 0 10px 0;
 }
 
 .foot {
     display: flex;
     height: auto;
     align-items: center; /* Zentriert die Elemente vertikal */
-    padding: 20px 0;
+    padding: 5px 0;
 }
 
 .foot div{
@@ -374,7 +459,8 @@ footer h2{
 }
 
 .foot div img {
-    height: 300px;
+    max-height: 250px;
     transform: rotate(25deg);
-    padding: 0;
+    /*padding: 0;
+    flex: content;*/
 }
