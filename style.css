@@ -364,7 +364,9 @@ span{
 }
 
 .description {
-    flex: 1; /* Beschreibungen nehmen den verfügbaren Platz ein */
+    flex: 1 1 70%; /* wächst, schrumpft, Basis 70% */
+    min-width: 0; /* sehr wichtig bei flexbox, damit text-wrap funktioniert */
+    word-wrap: break-word; /* sehr lange Worte umbrechen */
 }
 
 .price {
@@ -379,7 +381,6 @@ span{
     align-items: right;
     text-align: right;
     position: relative; /* Position des übergeordneten Elements festlegen */
-
 }
 
 /*Horizontale Linie*/
@@ -394,14 +395,21 @@ span{
     box-shadow: 0 2px 5px rgba(0,0,0,0.25);
 }*/
 
+
 .behandlungen img {
     max-height: 100px;
-    width: 100%;
-    filter: saturate(75%) brightness(110%);
+    width: 80%;
 }
 
 .behandlungen .center {
     text-align: center;
+}
+
+.section-divider {
+  width: 100%;
+  margin: 20px 0; /* Abstand oben/unten */
+  display: flex;
+  justify-content: center;
 }
 
 /*--------- IMPRESSUM -----------*/
